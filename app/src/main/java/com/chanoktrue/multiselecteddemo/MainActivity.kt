@@ -32,14 +32,20 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun HomeView() {
 
+//    var items by remember {
+//        mutableStateOf(
+//            (1..20).map {
+//                ListItem(
+//                    title = "Item $it",
+//                    isSelected = false
+//                )
+//            }
+//        )
+//    }
+
     var items by remember {
         mutableStateOf(
-            (1..20).map {
-                ListItem(
-                    title = "Item $it",
-                    isSelected = false
-                )
-            }
+         ListItem().createData()
         )
     }
 
